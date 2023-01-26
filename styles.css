@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(241, 235, 235);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    margin-top: 10px;
+    max-width: 1400px;
+}
+.row{
+    justify-content: center;
+    padding: 10px;
+}
+.box{
+    padding: 0;
+    background: white;
+    color:grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box1{
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.img-responsive{
+    max-width: 100%;
+}
+.Left-img{
+    position: relative;
+}
+.hername{
+    position: absolute;
+    bottom:8px;
+    left:16px;
+    color: #3a4060;
+    text-shadow: 2px 2px goldenrod;
+    font-size: 100%;
+}
+.Left-info{
+    padding: 10px;
+}
+.Left-info p{
+    color: #72492e;
+    font-weight: 400;
+}
+.Left-info p i{
+    margin-right: 15px;
+    color: #3a4060;
+}
+hr {
+    color: #ad8569;
+    width: 100%;
+}
+h2 i{
+padding: 20px;
+color: #ad8569;
+}
+h2{
+    color: #3a4060;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.card{
+    padding: 0 1.5rem;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.label-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5em  0  0.5em  0;
+}
+.percentage{
+    font-size: 0.7em;
+    color: #72492e;
+    font-weight: 500;
+    letter-spacing: 0.09em;   
+}
+.label{
+    font-size: 0.9em;
+    color: #72492e;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+}
+.progress-bg{
+    width: 100%;
+    height: 0.9rem;
+    background: rgba(173, 172, 172,0.41);
+    border-radius: 0.5rem;
+}
+.progress{
+    height: 0.9rem;
+    border-radius: 0.5rem;
+    background-color: #f1bd3c;
+    animation: progressFill 2s 1;
+}
+@keyframes progressFill{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.container2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container2 .card2{
+    margin-top: -20px;
+    position: relative;
+    width: 220px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.container2 .card2 .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.container2 .card2 .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.container2 .card2 .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: rgba(173, 172, 172, 0.41);
+    transform: translate(5px,5px);
+}
+.container2 .card2 .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    opacity: 0;
+    stroke-dashoffset: calc(400 - (400 * var(--num))/100);
+    animation: fadeIn 1s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.dot{
+    position: absolute;
+    inset:5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    /* 360/100=3.6 */
+    animation: animateDot 2s linear forwards;
+    
+}
+@keyframes animateDot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left:50%;
+    width: 10px;
+    height: 10px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--clr)
+    ,
+    0 0 30px var(--clr);
+}
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9f5f46;
+    font-weight: 700;
+    font-size: 2.5rem ;
+}
+.number h2 span{
+    
+    font-weight:400;
+    font-size: 0.75rem;
+    color: #72492e;
+}
+.number h2 p{
+    font-weight: 200;
+    font-size: 0.50em;
+    line-height: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+.boxx{
+    padding: 0;
+}
+.r2{
+    margin-top: -10px;
+}
+.a{
+    background: white;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.b{
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.r2 .section{
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+.r2 .section h5{
+    color: rgb(184, 182, 182);
+    font-weight: 400;
+    font-size: 18px;
+}
+.r2 .section h6 {
+    color: #3a4060;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 15px 0;
+}
+.r2 .section h6 i{
+    margin-right: 15px;
+    color: #3a4060;
+}
+.r2 .section h6 span{
+    background-color: #6f738b;
+    color: aliceblue;
+    font-weight: 400;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+footer{
+    background: #3a4060;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+footer a i{
+    font-size: 20px;
+    color: azure;
+    margin-bottom: 10px;
+}
+footer a i:hover {
+    color: #f1bd3c;
+}
+footer .text {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+footer .text span{
+    color: #f1bd3c;
+    font-family: 'Pacifico', cursive;
+}
+
+
